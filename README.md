@@ -6,12 +6,4 @@ To complement, and as the file is too large to put it all together here, we leav
 
 
  * © 2022-2025 SASquad Team  
- *  
- * This code is the property of SASquad Team and the developer Urafael Games.  
- * All rights reserved.  
- *  
- * This code is published solely for reading, analysis,  
- * and to demonstrate the transparency of SASquad Team across its platforms.  
- *  
- * It is strictly forbidden to use it for personal gain  
- * or to publish it on a website as your own.  
+ This code is the property of SASquad Team and the developer Urafael Games. All rights reserved. This code is published solely for reading, analysis, and to demonstrate the transparency of SASquad Team across its platforms. It is strictly forbidden to use it for personal gain or to publish it on a website as your own.  
