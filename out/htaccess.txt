@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Eliminar la extensión .html de las URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Redireccionar URLs con .html a versiones sin extensión (para SEO)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s(.*)\.html [NC]
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# Opcional: Definir index.html como predeterminado
+DirectoryIndex index.html
