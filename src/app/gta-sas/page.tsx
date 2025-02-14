@@ -9,7 +9,6 @@
  *  
  * It is strictly forbidden to use it for personal gain  
  * or to publish it on a website as your own.  
- * email: javierrbarros@urafaelgames.com
  */  
 
 "use client";
