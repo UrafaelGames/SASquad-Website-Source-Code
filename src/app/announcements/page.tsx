@@ -15,6 +15,12 @@ import React from 'react';
 const Announcements = () => {
   const announcements = [
     {
+      title: "Use of Emails and user names",
+      description: "We inform you that from now on, SASquad Team will ask for a username and password...",
+      image: "https://sasquad-team.com/images/SASquad_Logo.png",
+      link: "./use-of-emails-and-usernames",
+    },
+    {
       title: "Publication of the website source code",
       description: "As a transparency campaign, we, SASquad Team decided to release the source code of our website...",
       image: "https://sasquad-team.com/images/SASquad_Logo.png",

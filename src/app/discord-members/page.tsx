@@ -142,6 +142,17 @@ const ThankYouPage = () => {
               <h3>Payro</h3>
               <p>San Fierro Police Department</p>
             </div>
+            <div className="member-card">
+              <img
+                src="https://sasquad-team.com/images/Blaue.png"
+                alt="Mod 4"
+                className="member-image"
+                width={300}
+                height={300}
+              />
+              <h3>Blaue</h3>
+              <p>San Fierro Police Department</p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,25 +1,15 @@
-/**  
- * © 2022-2025 SASquad Team  
- *  
- * This code is the property of SASquad Team and the developer Urafael Games.  
- * All rights reserved.  
- *  
- * This code is published solely for reading, analysis,  
- * and to demonstrate the transparency of SASquad Team across its platforms.  
- *  
- * It is strictly forbidden to use it for personal gain  
- * or to publish it on a website as your own.  
- */  
-
 "use client";
 
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import ThemeSong  from '../theme-song/page';
+import ThemeSong from '../theme-song/page';
 
 const SlickSlider = dynamic(() => import('react-slick'), { ssr: false });
 
 export default function GtaSasPage() {
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
     const settings = {
         infinite: true,
         speed: 500,
@@ -41,6 +31,31 @@ export default function GtaSasPage() {
         ]
     };
 
+  
+    const handleDownload = async () => {
+      if (!username || !email) return;
+
+      try {
+          await fetch("https://sasquad-team.com/server/database/sendMail.php", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: `username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}`,
+          });
+
+          alert("Thank you! Your information has been saved. You will receive updates soon. An email was sent to your email with the thanks and also videos of how to install the mod.");
+          setIsModalOpen(false);
+          
+          // Redirigir al usuario a la descarga
+          window.location.href = "https://drive.google.com/file/d/1f6ltHop0Oq31B7Aa_xRaznuK-zshHmBT/view?usp=sharing";
+      } catch (error) {
+          console.error("Error saving user data:", error);
+          alert("There was an issue saving your information. Please try again.");
+      }
+  };
+
+
     return (
         <div className="page-gta-sas">
           {/* Parallax Effect */}
@@ -55,21 +70,51 @@ export default function GtaSasPage() {
               </a>
               <div className="synopsisS">
                 <h2>Grand Theft Auto San Andreas Stories</h2>
-                <p>In 1989, The Vagos and The Ballas enter the crack business, igniting a fierce rivalry. The VLA, an emerging gang, threatens their dominance. Loco Syndicate sees an opportunity and manages to get The Ballas and Los Vagos to work together, strengthening The Vagos against The Aztecas. The betrayal of a close friend of José, an important figure from the forest, further complicates the power struggle in the streets of San Andreas.</p>
+                <p>In 1989, The Vagos and The Ballas enter the crack business, igniting a fierce rivalry...</p>
               </div>
               <div className="downloadS-button-container">
-                <a href="https://drive.google.com/file/d/1f6ltHop0Oq31B7Aa_xRaznuK-zshHmBT/view?usp=sharing" className="downloadS-button">
+                <button className="downloadS-button" onClick={() => setIsModalOpen(true)}>
                   Download GTA SAS
-                </a>
+                </button>
               </div>
             </div>
           </div>
 
+  {/* Modal */}
+  {isModalOpen && (
+            <div className="modal-overlay">
+              <div className="modal">
+                <h2>Enter your details to download</h2>
+                <input
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <p className="legal-text">
+  This information will only be used to send you a thank-you message and other emails with notifications.  
+  You can read more about this in our Terms and Conditions, Article 12, at:  
+  <a href="https://sasquad-team.com/t-c" target="_blank" rel="noopener noreferrer">
+    https://sasquad-team.com/t-c
+  </a>
+</p>
+
+                <button onClick={handleDownload}>Submit & Download</button>
+                <button onClick={() => setIsModalOpen(false)}>Cancel</button>
+              </div>
+            </div>
+          )}
           {/* Sección de Novedades */}
           <div className="newsS-section">
             <h2>What&apos;s New in Version 1.0?</h2> 
             <ul className="newsS-list">
-              <li>13 new main misiions!</li>
+              <li>13 new main missions!</li>
               <li>2 new circuits/sub-missions</li>
               <li>25 collectibles in LS.</li>
               <li>17 new rampages missions in LS.</li>
@@ -81,7 +126,6 @@ export default function GtaSasPage() {
           </div>
 
           <ThemeSong />
-
 
           {/* Carousel Section */}
           <section className="carousel-section">
@@ -115,23 +159,22 @@ export default function GtaSasPage() {
 
           {/* Sección Parallax con Video de YouTube */}
           <section className="parallax">
-  <div className="parallax-content">
-    <h2>Listen now GTA SAS theme song!</h2>
-    <p>We are very pleased to present you our original production, GTA SAS theme song. LISTEN TO IT ON YOUTUBE!</p>
-    
-    {/* Video de YouTube */}
-    <section className="parallax-video">
-      <div className="video-container">
-        <iframe 
-          src="https://www.youtube.com/embed/1RooDjIfVjg" 
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-          allowFullScreen
-        ></iframe>
-      </div>
-    </section>
-  </div>
-</section>
-
+            <div className="parallax-content">
+              <h2>Listen now GTA SAS theme song!</h2>
+              <p>We are very pleased to present you our original production, GTA SAS theme song. LISTEN TO IT ON YOUTUBE!</p>
+              
+              {/* Video de YouTube */}
+              <section className="parallax-video">
+                <div className="video-container">
+                  <iframe 
+                    src="https://www.youtube.com/embed/1RooDjIfVjg" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </section>
+            </div>
+          </section>
         </div>
     );
 }

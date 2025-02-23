@@ -15,6 +15,12 @@ import React from 'react';
 const AnnouncementsHome = () => {
   const announcementsHome = [
     {
+      title: "Use of Emails and user names",
+      description: "We inform you that from now on, SASquad Team will ask for a username and password...",
+      image: "https://sasquad-team.com/images/SASquad_Logo.png",
+      link: "./use-of-emails-and-usernames",
+    },
+    {
       title: "Publication of the website source code",
       description: "As a transparency campaign, we, SASquad Team, decided to release the source code of our website...",
       image: "https://sasquad-team.com/images/SASquad_Logo.png",
@@ -25,13 +31,7 @@ const AnnouncementsHome = () => {
       description: "It is our pleasure to announce that the website has been 100% redesigned...",
       image: "https://sasquad-team.com/images/SASquad_Logo.png",
       link: "./2025-maintenance",
-    },
-    {
-      title: "Scheduled website maintenance",
-      description: "We inform you of a scheduled maintenance to the website...",
-      image: "https://sasquad-team.com/images/SASquad_Logo.png",
-      link: "./2025-maintenance-scheduled",
-    },
+    }
   ];
 
   return (

@@ -146,7 +146,7 @@ export default function Page() {
           <img src="https://sasquad-team.com/images/Patreon.jpg" alt="Patreon Logo" className="patreon-logo" width={150} height={100} />
           <h2>Support us in our Patreon!</h2>
           <p>With your support, we will be able to bring out more and better content for everyone. Join our community now and receive exclusive content!</p>
-          <a href="https://www.patreon.com/c/SASquadTeam" target="_blank" className="patreon-button">Visit us on Patreon &amp;#41;</a>
+          <a href="https://www.patreon.com/c/SASquadTeam" target="_blank" className="patreon-button">Visit us on Patreon</a>
         </div>
       </section>
 
