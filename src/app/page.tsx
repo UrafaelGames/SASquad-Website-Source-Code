@@ -146,28 +146,33 @@ export default function Page() {
           <img src="https://sasquad-team.com/images/Patreon.jpg" alt="Patreon Logo" className="patreon-logo" width={150} height={100} />
           <h2>Support us in our Patreon!</h2>
           <p>With your support, we will be able to bring out more and better content for everyone. Join our community now and receive exclusive content!</p>
-          <a href="https://www.patreon.com/c/SASquadTeam" target="_blank" className="patreon-button">Visit us on Patreon</a>
+          <a href="https://www.patreon.com/c/SASquadTeam" target="_blank" className="patreon-button">Visit us on Patreon &amp;#41;</a>
         </div>
       </section>
 
       {/* Sección Parallax de Contacto */}
       <section className="parallax-contact">
-        <div className="contact-content">
-          <h2>Contact</h2>
-          <p>We would love to hear from you! If you have any questions, comments or suggestions, feel free to contact us.</p>
-          
-          <div className="contact-info">
-            <div className="contact-item">
-              <i className="fas fa-envelope"></i>
-              <p>Email: <a href="mailto:mail@sasquad-team.com">mail@sasquad-team.com</a></p>
-            </div>
-            <div className="contact-item">
-              <i className="fab fa-discord"></i>
-              <p>Discord server: <a href="https://discord.gg/3KnDrXpj" target="_blank" rel="noopener noreferrer">Join our server</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="contact-content">
+    <h2>Contact</h2>
+    <p>We would love to hear from you! If you have any questions, comments, or suggestions, feel free to contact us.</p>
+
+    <div className="contact-info">
+      <div className="contact-item">
+        <i className="fas fa-envelope"></i>
+        <p>Email: <a href="mailto:mail@sasquad-team.com">mail@sasquad-team.com</a></p>
+      </div>
+      <div className="contact-item">
+        <i className="fab fa-discord"></i>
+        <p>Discord server: <a href="https://discord.gg/3KnDrXpj" target="_blank" rel="noopener noreferrer">Join our server</a></p>
+      </div>
+      <div className="contact-item">
+        <i className="fas fa-life-ring"></i>
+        <p>Need help or have a complaint? <a href="https://support.sasquad-team.com" target="_blank" rel="noopener noreferrer">Create a Ticket</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <ThemeSong />
 

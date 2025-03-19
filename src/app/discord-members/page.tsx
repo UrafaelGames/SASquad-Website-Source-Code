@@ -145,7 +145,7 @@ const ThankYouPage = () => {
             <div className="member-card">
               <img
                 src="https://sasquad-team.com/images/Blaue.png"
-                alt="Mod 4"
+                alt="Mod 3"
                 className="member-image"
                 width={300}
                 height={300}

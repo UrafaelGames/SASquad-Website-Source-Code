@@ -13,14 +13,21 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
+import { useRouter } from "next/navigation"; // Importar el router
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(prevState => !prevState);
   }, []);
+
+  // Cierra el menú cada vez que la ruta cambia
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [router]); 
 
   return (
     <nav className={`navbar ${isMenuOpen ? "active" : ""}`}>
@@ -28,8 +35,8 @@ export default function Navbar() {
         <img 
           src="https://sasquad-team.com/images/SASquad_Logo.png" 
           alt="SASquad Team Logo" 
-          width="80" // Tamaño ancho de la imagen
-          height="80" // Tamaño alto de la imagen
+          width="80"
+          height="80"
         />
         <h1>SASquad Team</h1>
       </div>
@@ -44,14 +51,14 @@ export default function Navbar() {
         <div></div>
       </div>
 
-      <ul className="nav-links">
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="/download">Downloads</Link></li>
-        <li><Link href="/announcements">Ads</Link></li>
-        <li><Link href="/gta-sas">GTA SAS</Link></li>
-        <li><Link href="/about-us">About Us</Link></li>
-        <li><Link href="/t-c">Terms & Conditions</Link></li>
-        <li><Link href="/credits">Credits</Link></li>
+      <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
+        <li><Link href="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
+        <li><Link href="/download" onClick={() => setIsMenuOpen(false)}>Downloads</Link></li>
+        <li><Link href="/announcements" onClick={() => setIsMenuOpen(false)}>Ads</Link></li>
+        <li><Link href="/gta-sas" onClick={() => setIsMenuOpen(false)}>GTA SAS</Link></li>
+        <li><Link href="/about-us" onClick={() => setIsMenuOpen(false)}>About Us</Link></li>
+        <li><Link href="/t-c" onClick={() => setIsMenuOpen(false)}>Terms & Conditions</Link></li>
+        <li><Link href="/credits" onClick={() => setIsMenuOpen(false)}>Credits</Link></li>
       </ul>
     </nav>
   );

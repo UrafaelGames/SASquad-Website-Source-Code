@@ -25,7 +25,13 @@ const AnnouncementsHome = () => {
       description: "It is our pleasure to announce that the website has been 100% redesigned...",
       image: "https://sasquad-team.com/images/SASquad_Logo.png",
       link: "./2025-maintenance",
-    }
+    },
+    {
+      title: "Scheduled website maintenance",
+      description: "We inform you of a scheduled maintenance to the website...",
+      image: "https://sasquad-team.com/images/SASquad_Logo.png",
+      link: "./2025-maintenance-scheduled",
+    },
   ];
 
   return (

@@ -121,25 +121,25 @@ export default function AboutUsPage() {
               </div>
               <div className="member-card">
                 <img
-                  src="https://sasquad-team.com/images/Blaue.png"
+                  src="https://sasquad-team.com/images/Benyel.png"
                   alt="Vehicle Modeller"
                   className="member-image"
                   width={300}
                   height={300}
                 />
-                <h3>Blaue</h3>
-                <p>Vehicles Modeller</p>
+                <h3>The Benyel</h3>
+                <p>Objects Modeller, Tymecycs</p>
               </div>
               <div className="member-card">
                 <img
-                  src="https://sasquad-team.com/images/brooklynzsmac.png"
+                  src="https://sasquad-team.com/images/Musho.png"
                   alt="Ped Modeller"
                   className="member-image"
                   width={300}
                   height={300}
                 />
-                <h3>Brooklynzsmac</h3>
-                <p>Peds Modeller</p>
+                <h3>Musho</h3>
+                <p>Missions Scripter</p>
               </div>
               <div className="member-card">
                 <img
@@ -154,14 +154,25 @@ export default function AboutUsPage() {
               </div>
               <div className="member-card">
                 <img
-                  src="https://sasquad-team.com/images/Musho.png"
+                  src="https://sasquad-team.com/images/Zacary.png"
                   alt="Mission Scripter"
                   className="member-image"
                   width={300}
                   height={300}
                 />
-                <h3>Musho</h3>
-                <p>Missions Scripter</p>
+                <h3>Zacary</h3>
+                <p>Peds Modeller</p>
+              </div>
+              <div className="member-card">
+                <img
+                  src="https://sasquad-team.com/images/Planeta.png"
+                  alt="Mission Scripter"
+                  className="member-image"
+                  width={300}
+                  height={300}
+                />
+                <h3>Planeta</h3>
+                <p>Peds Modeller</p>
               </div>
             </div>
           </div>
@@ -173,22 +184,41 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Sección de Contacto */}
-      <section id="contact" style={{ textAlign: "center", padding: "50px", backgroundColor: "#f4f4f4" }}>
-        <h2>Contact us!</h2>
-        <p>If you have any questions, suggestions or just want to join our community, feel free to contact us. We are always open to new members who are passionate about GTA modding.</p>
+     {/* Sección de Contacto */}
+<section id="contact" style={{ textAlign: "center", padding: "50px", backgroundColor: "#f4f4f4" }}>
+  <h2>Contact us!</h2>
+  <p>If you have any questions, suggestions, or just want to join our community, feel free to contact us. We are always open to new members who are passionate about GTA modding.</p>
 
-        <div>
-          <h3>E-mail:</h3>
-          <p><a href="mailto:mail@sasquad-team.com" className="contact-link"><img src="https://img.icons8.com/ios/50/000000/mail.png" alt="Mail Icon" className="contact-icon" width={30} height={30} /> mail@sasquad-team.com</a></p>
-        </div>
+  <div>
+    <h3>E-mail:</h3>
+    <p>
+      <a href="mailto:mail@sasquad-team.com" className="contact-link">
+        <img src="https://img.icons8.com/ios/50/000000/mail.png" alt="Mail Icon" className="contact-icon" width={30} height={30} /> mail@sasquad-team.com
+      </a>
+    </p>
+  </div>
 
-        <div>
-          <h3>Join Our Discord Server:</h3>
-          <p>Connect with us and other modders in real time! Join our Discord server to share ideas, get support and learn about the latest news.</p>
-          <p><a href="https://discord.gg/3KnDrXpj" target="_blank" className="contact-link"><img src="https://img.icons8.com/ios/50/000000/discord.png" alt="Discord Icon" className="contact-icon" width={30} height={30} /> Join our Discord</a></p>
-        </div>
-      </section>
+  <div>
+    <h3>Join Our Discord Server:</h3>
+    <p>Connect with us and other modders in real time! Join our Discord server to share ideas, get support, and learn about the latest news.</p>
+    <p>
+      <a href="https://discord.gg/3KnDrXpj" target="_blank" className="contact-link">
+        <img src="https://img.icons8.com/ios/50/000000/discord.png" alt="Discord Icon" className="contact-icon" width={30} height={30} /> Join our Discord
+      </a>
+    </p>
+  </div>
+
+  <div>
+    <h3>Need help or have a complaint?</h3>
+    <p>If you have any issues or complaints, please create a ticket on our support page.</p>
+    <p>
+      <a href="https://support.sasquad-team.com" target="_blank" className="contact-link">
+        <img src="https://img.icons8.com/ios/50/000000/help.png" alt="Support Icon" className="contact-icon" width={30} height={30} /> Create a Ticket
+      </a>
+    </p>
+  </div>
+</section>
+
 
     </div>
   );

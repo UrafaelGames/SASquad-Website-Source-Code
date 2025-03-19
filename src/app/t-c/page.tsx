@@ -18,7 +18,7 @@ const TermsAndConditions = () => {
     <section id="terms-container"> 
       <div id="terms"> 
         <h1>Terms and Conditions of Use</h1>
-        <p>Last updated: February 22, 2025</p>
+        <p>Last updated: February 8, 2025</p>
         <p>Welcome to SASquad Team. By accessing and using this website, you agree to abide by the following terms and conditions. If you do not agree to any of these terms, please do not use this site.</p>
 
         <div className="section">
@@ -95,23 +95,14 @@ const TermsAndConditions = () => {
           <p>2. Suspension of rights of access to internal resources.</p>
         </div>
         <div className="section">
-  <h2>12. Use of E-mails and Usernames</h2>
-  <p>
-    When downloading any mod from SASquad Team, you will be required to provide a username and email address. This information will be securely stored in our database and used exclusively by SASquad Team to send you notifications about your downloads and updates related to our team.
-  </p>
-
-  <p>
-    Your email address and username will never be shared with third parties under any circumstances. They are strictly for the exclusive use of SASquad Team. All stored information is securely managed by us, and we may periodically send announcements or updates, ensuring full transparency regarding its use.
-  </p>
-</div>
-
-        <div className="section">
-          <h2>13. Contact</h2>
+          <h2>12. Contact</h2>
           <p>If you have any questions about these terms and conditions, you can contact us through:</p>
 
           <p>E-mail: mail@sasquad-team.com</p>
 
           <p>Discord server: https://discord.gg/3KnDrXpj</p>
+
+          <p>Support Page: https.//support.sasquad-team.com</p>
         </div>
       </div>
     </section>

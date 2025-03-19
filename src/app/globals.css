@@ -2167,3 +2167,25 @@ h1 {
 .modal button:hover {
   background: #ff5722;
 }
+
+.highlight {
+  font-weight: bold;
+  color: #ff6600;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+
+.downloadS-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
