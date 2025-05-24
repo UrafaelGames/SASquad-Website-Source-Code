@@ -12,7 +12,6 @@
  */
 'use client';
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
 
 const formatDescription = (text: string) => {
   let formattedText = text.replace(/\n/g, '<br />');

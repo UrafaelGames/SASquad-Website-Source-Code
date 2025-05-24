@@ -112,7 +112,7 @@ export default function Footer() {
           >
             Powered by{' '}
             <Link href="https://nextjs.org" target="_blank" className="powered-link">
-              <SiNextdotjs className="inline-icon" /> Next.js
+              Next.js
             </Link>
           </motion.p>
         </div>

@@ -219,7 +219,10 @@ h1, p {
 
 .patreon-logo {
   width: 150px;
+  display: block;
+  margin: 0 auto;
 }
+
 
 .patreon-button {
   background-color: #ffcc00;
@@ -545,6 +548,11 @@ h1, p {
   margin-top: 15px;
   font-size: 14px;
   color: #bbb;
+  text-align: center; /* Centrar el texto */
+  display: flex;       /* Flex para alinear inline elements */
+  justify-content: center;
+  align-items: center;
+  gap: 5px;            /* Espacio entre elementos */
 }
 
 .heart-icon {
@@ -557,12 +565,13 @@ h1, p {
 .inline-icon {
   vertical-align: middle;
   margin-right: 5px;
+  font-size: 16px;     /* Opcional: tamaño uniforme para íconos */
 }
 
 .creator-link, .powered-link, .designer-link {
   color: #ffcc00;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
   font-weight: 500;
 }
 
@@ -570,6 +579,7 @@ h1, p {
   color: #fff;
   text-decoration: underline;
 }
+
 
 /* Legal Disclaimer */
 .legal-disclaimer {
@@ -973,13 +983,19 @@ background-image: url('/images/Screen2.png');
 
 .logo-container {
   display: block;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto; 
+  max-width: 250px; 
+  text-align: center; 
 }
 
 .logo {
   max-width: 250px;
-  width: 100%; 
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
 }
+
 
 .synopsis {
   margin-bottom: 20px;
@@ -1123,7 +1139,7 @@ background-image: url('/images/Screen2.png');
 /* Parallax Effect */
 .parallaxS {
   background: black; 
-  background-image: url('/images/SAS.jpg');
+  background-image: url('https://sasquad-team.com/images/SAS.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1155,8 +1171,11 @@ background-image: url('/images/Screen2.png');
 
 .logoS {
   max-width: 250px; 
-  width: 100%; 
+  width: auto;       
+  display: block;
+  margin: 0 auto;
 }
+
 
 .synopsisS {
   margin-bottom: 20px;
