@@ -119,7 +119,7 @@ const AnnouncementsHome = () => {
               )}
               <h2>{announcement.title}</h2>
               <p dangerouslySetInnerHTML={{ __html: formatDescription(announcement.description) }} />
-              {/* Enlace de lectura más, en caso de que quieras mantener el link */}
+              {/* Enlace de lectura  */}
              <a
   href={`https://sasquad-team.com/sasquad/newswire/announcement?slug=${announcement.slug}`}
   target="_blank"
